@@ -21,5 +21,5 @@ else:
 print('Finding the best reviewed items on Amazon...')
 
 # Download the page details for the target Amazon results search page
-res = requests.get('https://www.amazon.com/s/field-keywords=' + address)
+res = requests.get('https://www.amazon.com/s/field-keywords=' + replace("address", ' ', '%20'))
 res.raise_for_status
