@@ -21,5 +21,9 @@ else:
 print('Finding the best reviewed items on Amazon...')
 
 # Download the page details for the target Amazon results search page
-res = requests.get('https://www.amazon.com/s/field-keywords=' + replace("address", ' ', '%20') + '&sort=review-count-rank')
-res.raise_for_status
+# 2019-02-12
+# Below code is commented as traditional reqeuests function c=all no longer works with Amazon. One now needs
+# an Amazon.com Product API key to access product data from the site
+# ACTION: Create Amazon.com Product account and create API Key to access Amazon.com Product data
+##res = requests.get('https://www.amazon.com/s/field-keywords=' + replace("address", ' ', '%20') + '&sort=review-count-rank')
+##res.raise_for_status
